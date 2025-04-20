@@ -420,7 +420,7 @@ class EddienputGUI(QWidget):
         self.record_to_label = QLabel()
         self.record_to_label.setText('Record to:')
         main_layout.addWidget(self.record_to_label)
-        
+
         self.record_to_line_edit = QLineEdit()
         self.record_to_line_edit.setText('recording.txt')
         main_layout.addWidget(self.record_to_line_edit)
@@ -450,7 +450,7 @@ class EddienputGUI(QWidget):
 
     def dropEvent(self, event):
         if event.mimeData().hasText:
-            event.setDropAction(Qt.CopyAction)
+            event.setDropAction(Qt.DropAction.CopyAction)
             file_path: str = event.mimeData().urls()[0].toLocalFile()
             set_playback_file(file_path)
             event.accept()
