@@ -61,7 +61,10 @@ def update_button_value(button, value):
 
 # https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN
 key_code_map = {
+    'backspace'         : 0x08,
+    'tab'               : 0x09,
     'shift'             : 0x10,
+    'space'             : 0x20,
     '0'                 : 0x30,
     '1'                 : 0x31,
     '2'                 : 0x32,
@@ -115,6 +118,6 @@ key_code_map = {
     'up'                : 0x26,
     'right'             : 0x27,
     'down'              : 0x28,
-    'space'             : 0x08,
-    'enter'             : 0x0D
+    'enter'             : 0x0D,
+    'escape'            : 0x1B
 }
